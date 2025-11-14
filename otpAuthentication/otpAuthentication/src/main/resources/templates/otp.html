@@ -1,20 +1,55 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>
-			Request/Login
-		</title>
-	</head>
-	
-	<body>
-		<form action="/verifyotp" method = "post">
-		
-			<input type = "text" name = "uotp" />
-						
-			<input type = "submit" value = "verify otp" />
-			
-		</form>
-		
-	</body>
+<head>
+    <title>Verify OTP</title>
+</head>
 
+<body style="
+    font-family: Arial, sans-serif;
+    background: #f2f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+">
+
+    <form action="/verifyotp" method="post" style="
+        background: white;
+        padding: 25px 35px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        text-align: left;
+    ">
+
+        <h2 style="
+            text-align:center;
+            margin:0;
+            margin-bottom:10px;
+            color:#333;
+        ">VERIFY OTP</h2>
+
+        <label style="font-size: 15px; font-weight: bold;">Enter OTP:</label>
+        <input type="text" name="uotp" required style="
+            padding:10px; border:1px solid #ccc; border-radius:8px;
+            font-size:14px; width:100%;
+        " />
+
+        <input type="submit" value="VERIFY OTP" style="
+            padding:12px; margin-top:10px;
+            background:#4285f4; color:white;
+            border:none; border-radius:8px;
+            cursor:pointer; font-size:15px; font-weight:bold;
+        "
+        onmouseover="this.style.background='#2b66d8'"
+        onmouseout="this.style.background='#4285f4'"
+        />
+
+    </form>
+
+</body>
 </html>

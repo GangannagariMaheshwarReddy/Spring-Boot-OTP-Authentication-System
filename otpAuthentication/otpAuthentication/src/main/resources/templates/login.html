@@ -1,22 +1,72 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>
-			Request/Login
-		</title>
-	</head>
-	
-	<body>
-		<form action="/loginuser" method = "post">
-		
-			<label>Name:  </label><input type = "text" name = "un" required autofocus />
-						
-			<label>Password:  </label><input type = "text" name = "upwd" required />
-			
-			<input type="submit" value = "SIGN IN"/>
-		</form>
-		<p> NEW USER ? <a href="http://localhost:9090/"> SIGN UP </a></p>
-		
-	</body>
+<head>
+    <title>Request/Login</title>
+</head>
 
+<body style="
+    font-family: Arial, sans-serif;
+    background: #f2f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+">
+
+    <form action="/loginuser" method="post" style="
+        background: white;
+        padding: 25px 35px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    ">
+
+        <!-- Heading added -->
+        <h2 style="
+            text-align:center;
+            margin-top:0;
+            margin-bottom:10px;
+            color:#333;
+        ">LOGIN</h2>
+
+        <label style="font-size:15px; font-weight:bold;">Name:</label>
+        <input type="text" name="un" required autofocus style="
+            padding:10px; border:1px solid #ccc; border-radius:8px; width:100%;
+        " />
+
+        <label style="font-size:15px; font-weight:bold;">Password:</label>
+        <input type="text" name="upwd" required style="
+            padding:10px; border:1px solid #ccc; border-radius:8px; width:100%;
+        " />
+
+        <input type="submit" value="SIGN IN" style="
+            margin-top:10px;
+            padding:12px;
+            background:#4285f4;
+            color:white;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:15px;
+            font-weight:bold;
+        "
+        onmouseover="this.style.background='#2b66d8'"
+        onmouseout="this.style.background='#4285f4'"
+        />
+
+        <!-- Sign up moved INSIDE form -->
+        <p style="margin-top:10px; text-align:center; font-size:14px;">
+            NEW USER ?
+            <a href="http://localhost:9090/" style="
+                color:#4285f4; font-weight:bold; text-decoration:none;
+            ">SIGN UP</a>
+        </p>
+
+    </form>
+
+</body>
 </html>

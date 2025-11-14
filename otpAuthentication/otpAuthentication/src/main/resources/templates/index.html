@@ -1,29 +1,75 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>
-			Request/Login
-		</title>
-	</head>
-	
-	<body>
-		<form action="/Register" method = "post">
-		
-			<label>Name:  </label><input type = "text" name = "un" required autofocus />
-			
-			<label>Age:  </label><input type = "text" name = "ua" required />
-			
-			<label>Email:  </label><input type = "text" name = "ue" required />
-			
-			<label>Phone:  </label><input type = "text" name = "up" required />
-			
-			<label>Password:  </label><input type = "text" name = "upwd" required />
-			
-			<input type="submit" value = "SIGN UP"/>
-		</form>
-		
-		<p> ALREADY REGISTERD ? <a href="http://localhost:9090/login"> SIGN IN </a></p>
-	
-	</body>
+<head>
+    <title>Request/Login</title>
+</head>
 
+<body style="
+    font-family: Arial, sans-serif;
+    background: #f2f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+">
+
+    <form action="/Register" method="post" style="
+        background: white;
+        padding: 25px 35px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        text-align: left;
+    ">
+
+        <label style="font-size: 15px; font-weight: bold;">Name:</label>
+        <input type="text" name="un" required autofocus style="
+            padding:10px; border:1px solid #ccc; border-radius:8px; width:100%;
+        " />
+
+        <label style="font-size: 15px; font-weight: bold;">Age:</label>
+        <input type="text" name="ua" required style="
+            padding:10px; border:1px solid #ccc; border-radius:8px; width:100%;
+        " />
+
+        <label style="font-size: 15px; font-weight: bold;">Email:</label>
+        <input type="text" name="ue" required style="
+            padding:10px; border:1px solid #ccc; border-radius:8px; width:100%;
+        " />
+
+        <label style="font-size: 15px; font-weight: bold;">Phone:</label>
+        <input type="text" name="up" required style="
+            padding:10px; border:1px solid #ccc; border-radius:8px; width:100%;
+        " />
+
+        <label style="font-size: 15px; font-weight: bold;">Password:</label>
+        <input type="text" name="upwd" required style="
+            padding:10px; border:1px solid #ccc; border-radius:8px; width:100%;
+        " />
+
+        <input type="submit" value="SIGN UP" style="
+            padding:12px; margin-top:10px;
+            background:#4285f4; color:white;
+            border:none; border-radius:8px;
+            cursor:pointer; font-size:15px; font-weight:bold;
+        "
+        onmouseover="this.style.background='#2b66d8'"
+        onmouseout="this.style.background='#4285f4'"
+        />
+
+        <!-- TEXT MOVED INSIDE FORM AND CENTERED -->
+        <p style="margin-top: 10px; text-align: center; font-size: 14px;">
+            ALREADY REGISTERED ?
+            <a href="http://localhost:9090/login" style="
+                color:#4285f4; font-weight:bold; text-decoration:none;
+            ">SIGN IN</a>
+        </p>
+
+    </form>
+
+</body>
 </html>
